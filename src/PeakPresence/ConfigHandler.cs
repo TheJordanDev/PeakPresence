@@ -10,6 +10,8 @@ public static class ConfigHandler
 
     public static ConfigEntry<string> DiscordAppID { get; private set; } = null!;
 
+    public static ConfigEntry<string> ForcedLanguage { get; private set; } = null!;
+
     public static ConfigEntry<string> LogoImageKey { get; private set; } = null!;
     public static ConfigEntry<string> ShoreImageKey { get; private set; } = null!;
     public static ConfigEntry<string> TropicsImageKey { get; private set; } = null!;
@@ -23,6 +25,11 @@ public static class ConfigHandler
     {
         config = configFile;
         DiscordAppID = config.Bind("General", "DiscordAppID", "1408478763682894045", "The Discord Application ID to use for Rich Presence.");
+
+        ForcedLanguage = config.Bind("General", "ForcedLanguage", "", new ConfigDescription(
+            "The language to use for forced localization.",
+            new AcceptableValueList<string>(["", "en", "fr", "it", "de", "es", "es-419", "pt-BR", "ru", "uk", "zh-Hans", "zh-Hant", "ja", "ko", "pl", "tr"])
+        ));
 
         LogoImageKey = config.Bind("Images", "LogoImageKey", "logo", "The key for the logo image.");
         ShoreImageKey = config.Bind("Images", "ShoreImageKey", "shore", "The key for the shore image.");

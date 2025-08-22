@@ -30,6 +30,7 @@ All translations (other than English and French) were AI-generated. You are welc
 
 - The mod generates a config file on first launch.
 - You can customize Rich Presence text and behavior via the config file or by editing localization files for full language support.
+- You can configure ForcedLanguage to force the RPC to use a specific Language Code instead of Syncing with Game language ("en", "fr", "it", "de", "es", "es-419", "pt-BR", "ru", "uk", "zh-Hans", "zh-Hant", "ja", "ko", "pl", "tr")
 
 ## Building
 
