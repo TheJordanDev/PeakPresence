@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>PeakPresence</AssemblyName>
+    <AssemblyTitle>PeakPresence</AssemblyTitle>
+    <Version>0.1.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DiscordRichPresence" Version="1.6.1.70" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="$(UserProfile)\.nuget\packages\discordrichpresence\1.6.1.70\lib\netstandard2.0\DiscordRPC.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>DiscordRPC.dll</Link>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="l10n\**\*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
