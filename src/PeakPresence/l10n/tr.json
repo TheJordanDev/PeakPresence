@@ -3,5 +3,14 @@
   "playing.multiplayer": "Çok oyunculu oyun",
   "main_menu": "Ana menü",
   "airport": "Havalimanı",
-  "ingame": "Oyunda: {1}"
+  "ingame": "Oyunda: {1}",
+  "ingame.main_menu": "Bir sonraki macerayı planlıyor",
+  "ingame.airport": "Kalkışa hazırlanıyor",
+  "ingame.shore": "Sahildeki kazadan sağ çıkıyor",
+  "ingame.tropics": "Tropika'nın gür ormanlarını keşfediyor",
+  "ingame.alpine": "Alpler'in zirvelerine tırmanıyor",
+  "ingame.mesa": "Çorak yamaçların kayalık arazisinde yol alıyor",
+  "ingame.caldera": "Kaldera’da ‘zemin lav’ oyunu oynuyor",
+  "ingame.kiln": "Fırının sıcağına dayanıyor",
+  "ingame.peak": "Zirveye ulaşıyor"
 }

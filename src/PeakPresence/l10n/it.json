@@ -3,5 +3,14 @@
   "playing.multiplayer": "Partita multigiocatore",
   "main_menu": "Menu principale",
   "airport": "Aeroporto",
-  "ingame": "In gioco: {1}"
+  "ingame": "In gioco: {1}",
+  "ingame.main_menu": "Pianificando la prossima avventura",
+  "ingame.airport": "Preparandosi al decollo",
+  "ingame.shore": "Sopravvivere allo schianto sulla Spiaggia",
+  "ingame.tropics": "Esplorando le giungle rigogliose dei Tropici",
+  "ingame.alpine": "Scalando le vette delle Nevi",
+  "ingame.mesa": "Attraversando il terreno roccioso della Mesa",
+  "ingame.caldera": "Giocando a ‘il pavimento è lava’ nella Caldera",
+  "ingame.kiln": "Resistendo al calore della Fornace",
+  "ingame.peak": "Raggiungendo la Vetta"
 }

@@ -1,6 +1,4 @@
 using BepInEx.Configuration;
-using pworld.Scripts;
-using UnityEngine;
 
 namespace AncestralMod;
 
@@ -11,6 +9,8 @@ public static class ConfigHandler
     public static ConfigEntry<string> DiscordAppID { get; private set; } = null!;
 
     public static ConfigEntry<string> ForcedLanguage { get; private set; } = null!;
+
+    public static ConfigEntry<bool> UseDetailedDetails { get; private set; } = null!;
 
     public static ConfigEntry<string> LogoImageKey { get; private set; } = null!;
     public static ConfigEntry<string> ShoreImageKey { get; private set; } = null!;
@@ -30,6 +30,8 @@ public static class ConfigHandler
             "The language to use for forced localization.",
             new AcceptableValueList<string>(["", "en", "fr", "it", "de", "es", "es-419", "pt-BR", "ru", "uk", "zh-Hans", "zh-Hant", "ja", "ko", "pl", "tr"])
         ));
+
+        UseDetailedDetails = config.Bind("General", "UseDetailedDetails", false, "Whether to use detailed presence information instead of \"In Game: {location}\"");
 
         LogoImageKey = config.Bind("Images", "LogoImageKey", "logo", "The key for the logo image.");
         ShoreImageKey = config.Bind("Images", "ShoreImageKey", "shore", "The key for the shore image.");

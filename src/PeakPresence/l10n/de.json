@@ -3,5 +3,14 @@
   "playing.multiplayer": "Mehrspielermodus",
   "main_menu": "Hauptmenü",
   "airport": "Flughafen",
-  "ingame": "Im Spiel: {1}"
+  "ingame": "Im Spiel: {1}",
+  "ingame.main_menu": "Planung des nächsten Abenteuers",
+  "ingame.airport": "Vorbereitung auf den Abflug",
+  "ingame.shore": "Den Absturz an der Küste überleben",
+  "ingame.tropics": "Die üppigen Dschungel der Tropen erkunden",
+  "ingame.alpine": "Die Höhen des Schneegebirges erklimmen",
+  "ingame.mesa": "Das felsige Gelände des Mesa durchqueren",
+  "ingame.caldera": "Fußboden ist Lava in der Caldera spielen",
+  "ingame.kiln": "Der Hitze des Brennofens standhalten",
+  "ingame.peak": "Nach dem Gipfel greifen"
 }

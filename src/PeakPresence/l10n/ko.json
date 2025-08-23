@@ -3,5 +3,14 @@
   "playing.multiplayer": "멀티플레이 모드",
   "main_menu": "메인 메뉴",
   "airport": "공항",
-  "ingame": "게임 중: {1}"
+  "ingame": "게임 중: {1}",
+  "ingame.main_menu": "다음 모험을 계획 중",
+  "ingame.airport": "이륙 준비 중",
+  "ingame.shore": "해안에서의 추락을 생존하기",
+  "ingame.tropics": "열대 우림을 탐험 중",
+  "ingame.alpine": "고산 지대의 높이를 오르기",
+  "ingame.mesa": "메사의 바위 지형을 탐험하기",
+  "ingame.caldera": "칼데라에서 ‘바닥은 용암’ 놀이",
+  "ingame.kiln": "가마의 열기를 견디기",
+  "ingame.peak": "정상을 향해 나아가기"
 }

@@ -3,5 +3,14 @@
   "playing.multiplayer": "En multijoueur",
   "main_menu": "Menu principal",
   "airport": "Aéroport",
-  "ingame": "En jeu : {1}"
+  "ingame": "En jeu : {1}",
+  "ingame.main_menu": "Planification de la prochaine aventure",
+  "ingame.airport": "Préparation au décollage",
+  "ingame.shore": "Survivre au crash sur la Plage",
+  "ingame.tropics": "Explorer les jungles luxuriantes des Tropiques",
+  "ingame.alpine": "Gravir les hauteurs des Alpes",
+  "ingame.mesa": "Naviguer sur le plateau rocailleux de la Mesa",
+  "ingame.caldera": "Jouer au sol est en lave dans la Caldeira",
+  "ingame.kiln": "Résister à la chaleur de la Fournaise",
+  "ingame.peak": "Atteindre le Pic"
 }

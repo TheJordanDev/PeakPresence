@@ -49,6 +49,23 @@ public static class Helper
 		};
 	}
 
+	public static string GetPresenceStateCode(RichPresenceState state)
+	{
+		return state switch
+		{
+			RichPresenceState.Status_MainMenu => "main_menu",
+			RichPresenceState.Status_Airport => "airport",
+			RichPresenceState.Status_Shore => "shore",
+			RichPresenceState.Status_Tropics => "tropics",
+			RichPresenceState.Status_Alpine => "alpine",
+			RichPresenceState.Status_Mesa => "mesa",
+			RichPresenceState.Status_Caldera => "caldera",
+			RichPresenceState.Status_Kiln => "kiln",
+			RichPresenceState.Status_Peak => "peak",
+			_ => "unknown"
+		};
+	}
+
 
 	public static (string Key, string Text, string Details) GetCurrentStateContext(RichPresenceService __instance)
 	{
@@ -58,8 +75,13 @@ public static class Helper
 		string Text = GetStateSmallImageText(__instance.m_currentState);
 		Text = UppercaseFirst(Text.ToLower());
 
-		string Details = LocalizationManager.Get("ingame");
-		Details = Details.Replace("{1}", Text);
+		string Details;
+
+		if (ConfigHandler.UseDetailedDetails.Value) Details = LocalizationManager.Get($"ingame.{GetPresenceStateCode(__instance.m_currentState)}");
+		else {
+			Details = LocalizationManager.Get("ingame");
+			Details = Details.Replace("{1}", Text);
+		}
 
 		return (Key, Text, Details);
 

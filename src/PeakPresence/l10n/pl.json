@@ -3,5 +3,14 @@
   "playing.multiplayer": "Gra wieloosobowa",
   "main_menu": "Menu główne",
   "airport": "Lotnisko",
-  "ingame": "W grze: {1}"
+  "ingame": "W grze: {1}",
+  "ingame.main_menu": "Planowanie kolejnej przygody",
+  "ingame.airport": "Przygotowania do startu",
+  "ingame.shore": "Przetrwanie katastrofy na Wybrzeżu",
+  "ingame.tropics": "Odkrywanie bujnych dżungli Tropików",
+  "ingame.alpine": "Wspinaczka na szczyty Gór",
+  "ingame.mesa": "Przemierzanie skalistego terenu Stoliwa",
+  "ingame.caldera": "Gra w ‘podłoga to lawa’ w Kalderze",
+  "ingame.kiln": "Wytrzymując żar Czeluści",
+  "ingame.peak": "Sięgając po Szczyt"
 }

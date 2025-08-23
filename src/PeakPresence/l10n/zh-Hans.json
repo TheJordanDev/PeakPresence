@@ -3,5 +3,14 @@
   "playing.multiplayer": "多人模式",
   "main_menu": "主菜单",
   "airport": "机场",
-  "ingame": "游戏中：{1}"
+  "ingame": "游戏中：{1}",
+  "ingame.main_menu": "计划下一次冒险",
+  "ingame.airport": "准备起飞",
+  "ingame.shore": "在海岸坠机中幸存",
+  "ingame.tropics": "探索热带的茂密丛林",
+  "ingame.alpine": "攀登雪山高处",
+  "ingame.mesa": "穿越方山的岩石地形",
+  "ingame.caldera": "在火山口玩“地板是岩浆”",
+  "ingame.kiln": "承受熔炉的高温",
+  "ingame.peak": "攀登顶峰"
 }

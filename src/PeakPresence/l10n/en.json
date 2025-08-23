@@ -3,5 +3,14 @@
   "playing.multiplayer": "Playing Multiplayer",
   "main_menu": "Main Menu",
   "airport": "Airport",
-  "ingame": "In Game: {1}"
+  "ingame": "In Game: {1}",
+  "ingame.main_menu": "Planning the next adventure",
+  "ingame.airport": "Preparing for takeoff",
+  "ingame.shore": "Surviving the crash at the Shore",
+  "ingame.tropics": "Exploring the lush jungles of the Tropics",
+  "ingame.alpine": "Scaling the heights of the Alpine",
+  "ingame.mesa": "Navigating the rocky terrain of the Mesa",
+  "ingame.caldera": "Playing the floor is lava in the Caldera",
+  "ingame.kiln": "Withstanding the heat of the Kiln",
+  "ingame.peak": "Reaching for the Peak"
 }

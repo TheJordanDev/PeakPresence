@@ -3,5 +3,14 @@
   "playing.multiplayer": "マルチプレイ",
   "main_menu": "メインメニュー",
   "airport": "空港",
-  "ingame": "ゲーム中: {1}"
+  "ingame": "ゲーム中: {1}",
+  "ingame.main_menu": "次の冒険を計画中",
+  "ingame.airport": "離陸の準備中",
+  "ingame.shore": "海岸での墜落を生き延びる",
+  "ingame.tropics": "熱帯の豊かなジャングルを探索中",
+  "ingame.alpine": "高山の頂を登る",
+  "ingame.mesa": "メサの岩だらけの地形を進む",
+  "ingame.caldera": "カルデラで『床はマグマ』をプレイ中",
+  "ingame.kiln": "火口の熱さに耐える",
+  "ingame.peak": "山頂を目指す"
 }
