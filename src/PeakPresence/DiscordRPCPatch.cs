@@ -18,7 +18,7 @@ class DiscordRPCPatch
 			(string SmallImageKey, string SmallImageText, string Details) = Helper.GetCurrentStateContext(__instance);
 
 			int RoomPlayerAmount = PhotonNetwork.InRoom ? PhotonNetwork.PlayerList.Length : 1;
-			int MaxRoomPlayers = PhotonNetwork.CurrentRoom?.MaxPlayers ?? 1;
+			int MaxRoomPlayers = PhotonNetwork.CurrentRoom?.MaxPlayers - 1 ?? 1; // -1 to exclude the added slot for devs backdoor (not used since mid June 2025)
 
 			string State = "";
 			Party Party = new Party();
