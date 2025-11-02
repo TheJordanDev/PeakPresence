@@ -1,9 +1,9 @@
 ﻿using AncestralMod;
 using BepInEx;
 using BepInEx.Logging;
+using System;
 using DiscordRPC;
 using HarmonyLib;
-using UnityEngine.SceneManagement;
 
 namespace PeakPresence;
 
@@ -25,6 +25,10 @@ public partial class Plugin : BaseUnityPlugin
 
         ConfigHandler.Initialize(Config);
         
+        var queueGO = new UnityEngine.GameObject("DiscordRPCQueue");
+        DontDestroyOnLoad(queueGO);
+        queueGO.AddComponent<DiscordRPCQueue>();
+        
         Client = new DiscordRpcClient(ConfigHandler.DiscordAppID.Value);
 
         Client.OnReady += (sender, e) =>
@@ -38,10 +42,48 @@ public partial class Plugin : BaseUnityPlugin
 
         _harmony ??= new Harmony(Info.Metadata.GUID);
         _harmony.PatchAll(typeof(DiscordRPCPatch));
+
+        try
+        {
+            InvokeRepeating(nameof(PeriodicUpdateDiscordRPC), 15f, 15f);
+        }
+        catch (Exception ex)
+        {
+            Log.LogWarning($"Failed to start periodic RPC updater: {ex.Message}");
+        }
     }
 
-    public void Destroy()
+    private void PeriodicUpdateDiscordRPC()
     {
-        Client?.Dispose();
+        try
+        {
+            var richPresence = GameHandler.GetService<RichPresenceService>();
+            if (richPresence != null)
+            {
+                DiscordRPCPatch.UpdateDiscordRPC(richPresence.m_currentState);
+            }
+        }
+        catch (Exception ex)
+        {
+            Log.LogWarning($"PeriodicUpdateDiscordRPC failed: {ex.Message}");
+        }
+    }
+
+    private void OnDestroy()
+    {
+        try
+        {
+            CancelInvoke(nameof(PeriodicUpdateDiscordRPC));
+        }
+        catch { }
+
+        try
+        {
+            Client?.Dispose();
+        }
+        catch (Exception ex)
+        {
+            Log.LogWarning($"Error disposing Discord client: {ex.Message}");
+        }
     }
 }

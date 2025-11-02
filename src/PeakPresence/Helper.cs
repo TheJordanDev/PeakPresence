@@ -67,20 +67,19 @@ public static class Helper
 	}
 
 
-	public static (string Key, string Text, string Details) GetCurrentStateContext(RichPresenceService __instance)
+	public static (string Key, string Text, string Details) GetCurrentStateContext(RichPresenceState state)
 	{
 
-		string Key = GetStateSmallImageKey(__instance.m_currentState);
+		string Key = GetStateSmallImageKey(state);
 
-		string Text = GetStateSmallImageText(__instance.m_currentState);
+		string Text = GetStateSmallImageText(state);
 		Text = UppercaseFirst(Text.ToLower());
 
 		string Details;
 
-		if (ConfigHandler.UseDetailedDetails.Value) Details = LocalizationManager.Get($"ingame.{GetPresenceStateCode(__instance.m_currentState)}");
+		if (ConfigHandler.UseDetailedDetails.Value) Details = LocalizationManager.Get($"ingame.{GetPresenceStateCode(state)}");
 		else {
-			Details = LocalizationManager.Get("ingame");
-			Details = Details.Replace("{1}", Text);
+			Details = string.Format(LocalizationManager.Get("ingame"), Text);
 		}
 
 		return (Key, Text, Details);

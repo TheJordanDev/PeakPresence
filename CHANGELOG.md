@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.5] - 05/11/2025
+
+- Added support for the new biome : The ROOTS
+- Added option to show height instead of "Playing Solo / Multiplayer" with the option to abbreviate meters to km when above 1000m
+- Updated translations to include new height strings ("progress.height.meters" and "progress.height.kilometers")
+
 ## [0.4] - 29/08/2025
 
 ### Reverted
