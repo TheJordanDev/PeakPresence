@@ -97,14 +97,25 @@ class DiscordRPCPatch
 			float? currentTime = Helper.GetCurrentGameTime();
 			if (currentTime != null)
 				Timestamps = new Timestamps { Start = DateTime.UtcNow.AddSeconds(-currentTime.Value) };
-			DiscordRPCQueue.SendRefresh(new DiscordRPCQueue.RefreshRequest(
-				Details,
-				State,
-				Party,
-				Assets,
-				Timestamps,
-				ActivityType.Playing
-			));
+			Plugin.Client.SetPresence(
+				new RichPresence()
+				{
+					Details = Details,
+					State = State,
+					Party = Party,
+					Assets = Assets,
+					Timestamps = Timestamps,
+					Type = ActivityType.Playing
+				}
+			);
+			// DiscordRPCQueue.SendRefresh(new DiscordRPCQueue.RefreshRequest(
+			// 	Details,
+			// 	State,
+			// 	Party,
+			// 	Assets,
+			// 	Timestamps,
+			// 	ActivityType.Playing
+			// ));
 		}
 	}
 

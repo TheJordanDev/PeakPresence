@@ -25,9 +25,9 @@ public partial class Plugin : BaseUnityPlugin
 
         ConfigHandler.Initialize(Config);
         
-        var queueGO = new UnityEngine.GameObject("DiscordRPCQueue");
-        DontDestroyOnLoad(queueGO);
-        queueGO.AddComponent<DiscordRPCQueue>();
+        // var queueGO = new UnityEngine.GameObject("DiscordRPCQueue");
+        // DontDestroyOnLoad(queueGO);
+        // queueGO.AddComponent<DiscordRPCQueue>();
         
         Client = new DiscordRpcClient(ConfigHandler.DiscordAppID.Value);
 
@@ -43,39 +43,39 @@ public partial class Plugin : BaseUnityPlugin
         _harmony ??= new Harmony(Info.Metadata.GUID);
         _harmony.PatchAll(typeof(DiscordRPCPatch));
 
-        try
-        {
-            InvokeRepeating(nameof(PeriodicUpdateDiscordRPC), 15f, 15f);
-        }
-        catch (Exception ex)
-        {
-            Log.LogWarning($"Failed to start periodic RPC updater: {ex.Message}");
-        }
+        // try
+        // {
+        //     InvokeRepeating(nameof(PeriodicUpdateDiscordRPC), 15f, 15f);
+        // }
+        // catch (Exception ex)
+        // {
+        //     Log.LogWarning($"Failed to start periodic RPC updater: {ex.Message}");
+        // }
     }
 
-    private void PeriodicUpdateDiscordRPC()
-    {
-        try
-        {
-            var richPresence = GameHandler.GetService<RichPresenceService>();
-            if (richPresence != null)
-            {
-                DiscordRPCPatch.UpdateDiscordRPC(richPresence.m_currentState);
-            }
-        }
-        catch (Exception ex)
-        {
-            Log.LogWarning($"PeriodicUpdateDiscordRPC failed: {ex.Message}");
-        }
-    }
+    // private void PeriodicUpdateDiscordRPC()
+    // {
+    //     try
+    //     {
+    //         var richPresence = GameHandler.GetService<RichPresenceService>();
+    //         if (richPresence != null)
+    //         {
+    //             DiscordRPCPatch.UpdateDiscordRPC(richPresence.m_currentState);
+    //         }
+    //     }
+    //     catch (Exception ex)
+    //     {
+    //         Log.LogWarning($"PeriodicUpdateDiscordRPC failed: {ex.Message}");
+    //     }
+    // }
 
     private void OnDestroy()
     {
-        try
-        {
-            CancelInvoke(nameof(PeriodicUpdateDiscordRPC));
-        }
-        catch { }
+        // try
+        // {
+        //     CancelInvoke(nameof(PeriodicUpdateDiscordRPC));
+        // }
+        // catch { }
 
         try
         {

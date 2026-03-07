@@ -23,6 +23,7 @@ public static class Helper
 		{
 			RichPresenceState.Status_Shore => ConfigHandler.ShoreImageKey.Value,
 			RichPresenceState.Status_Tropics => ConfigHandler.TropicsImageKey.Value,
+			RichPresenceState.Status_Roots => ConfigHandler.RootsImageKey.Value,
 			RichPresenceState.Status_Alpine => ConfigHandler.AlpineImageKey.Value,
 			RichPresenceState.Status_Mesa => ConfigHandler.MesaImageKey.Value,
 			RichPresenceState.Status_Caldera => ConfigHandler.CalderaImageKey.Value,
@@ -40,6 +41,7 @@ public static class Helper
 			RichPresenceState.Status_Airport => LocalizationManager.Get("airport"),
 			RichPresenceState.Status_Shore => LocalizationManager.GetVanilla("SHORE"),
 			RichPresenceState.Status_Tropics => LocalizationManager.GetVanilla("TROPICS"),
+			RichPresenceState.Status_Roots => LocalizationManager.GetVanilla("ROOTS"),
 			RichPresenceState.Status_Alpine => LocalizationManager.GetVanilla("ALPINE"),
 			RichPresenceState.Status_Mesa => LocalizationManager.GetVanilla("MESA"),
 			RichPresenceState.Status_Caldera => LocalizationManager.GetVanilla("CALDERA"),
@@ -57,6 +59,7 @@ public static class Helper
 			RichPresenceState.Status_Airport => "airport",
 			RichPresenceState.Status_Shore => "shore",
 			RichPresenceState.Status_Tropics => "tropics",
+			RichPresenceState.Status_Roots => "roots",
 			RichPresenceState.Status_Alpine => "alpine",
 			RichPresenceState.Status_Mesa => "mesa",
 			RichPresenceState.Status_Caldera => "caldera",

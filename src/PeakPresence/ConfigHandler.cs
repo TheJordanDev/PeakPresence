@@ -12,13 +12,14 @@ public static class ConfigHandler
 
     public static ConfigEntry<bool> UseDetailedDetails { get; private set; } = null!;
 
-    public static ConfigEntry<bool> ShowAliveStatus { get; private set; } = null!;
-    public static ConfigEntry<bool> ShowHeight { get; private set; } = null!;
-    public static ConfigEntry<bool> AbbreviateHeight { get; private set; } = null!;
+    // public static ConfigEntry<bool> ShowAliveStatus { get; private set; } = null!;
+    // public static ConfigEntry<bool> ShowHeight { get; private set; } = null!;
+    // public static ConfigEntry<bool> AbbreviateHeight { get; private set; } = null!;
 
     public static ConfigEntry<string> LogoImageKey { get; private set; } = null!;
     public static ConfigEntry<string> ShoreImageKey { get; private set; } = null!;
     public static ConfigEntry<string> TropicsImageKey { get; private set; } = null!;
+    public static ConfigEntry<string> RootsImageKey { get; private set; } = null!;
     public static ConfigEntry<string> AlpineImageKey { get; private set; } = null!;
     public static ConfigEntry<string> MesaImageKey { get; private set; } = null!;
     public static ConfigEntry<string> CalderaImageKey { get; private set; } = null!;
@@ -39,13 +40,14 @@ public static class ConfigHandler
 
         UseDetailedDetails = config.Bind("General", "UseDetailedDetails", false, "Whether to use detailed presence information instead of \"In Game: {location}\"");
 
-        ShowAliveStatus = config.Bind("General", "ShowAliveStatus", true, "Whether to show if the player is alive or dead in the presence.");
-        ShowHeight = config.Bind("General", "ShowHeight", true, "Whether to show the player's height in the presence.");
-        AbbreviateHeight = config.Bind("General", "AbbreviateHeight", true, "Whether to abbreviate the height measurement (e.g. 1500 m -> 1.5 km).");
+        // ShowAliveStatus = config.Bind("General", "ShowAliveStatus", true, "Whether to show if the player is alive or dead in the presence.");
+        // ShowHeight = config.Bind("General", "ShowHeight", true, "Whether to show the player's height in the presence.");
+        // AbbreviateHeight = config.Bind("General", "AbbreviateHeight", true, "Whether to abbreviate the height measurement (e.g. 1500 m -> 1.5 km).");
 
         LogoImageKey = config.Bind("Images", "LogoImageKey", "logo", "The key for the logo image.");
         ShoreImageKey = config.Bind("Images", "ShoreImageKey", "shore", "The key for the shore image.");
         TropicsImageKey = config.Bind("Images", "TropicsImageKey", "tropics", "The key for the tropics image.");
+        RootsImageKey = config.Bind("Images", "RootsImageKey", "roots", "The key for the roots image.");
         AlpineImageKey = config.Bind("Images", "AlpineImageKey", "alpine", "The key for the alpine image.");
         MesaImageKey = config.Bind("Images", "MesaImageKey", "mesa", "The key for the mesa image.");
         CalderaImageKey = config.Bind("Images", "CalderaImageKey", "caldera", "The key for the caldera image.");
