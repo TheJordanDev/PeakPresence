@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.6] - 19/03/2026
+
+- Fixed the patch thats listened to the state update ( I don't know when it was changed but now its fixed )
+
 ## [0.5] - 05/11/2025
 
 - Added support for the new biome : The ROOTS

@@ -13,9 +13,16 @@ class DiscordRPCPatch
 
 	[HarmonyPatch(typeof(RichPresenceService), "SetState")]
 	[HarmonyPostfix]
+	static void DiscordRPCPatchPostfix(RichPresenceService __instance, RichPresenceState state)
+	{
+		UpdateDiscordRPC(state);
+	}
+
+	[HarmonyPatch(typeof(RichPresenceService), "Dirty")]
+	[HarmonyPostfix]
 	static void DiscordRPCPatchPostfix(RichPresenceService __instance)
 	{
-		UpdateDiscordRPC(__instance.m_currentState);
+		UpdateDiscordRPC(__instance._presence.State);
 	}
 
 	// private static Character Player => Character.localCharacter;
