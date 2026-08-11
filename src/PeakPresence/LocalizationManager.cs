@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using AncestralMod;
 using Newtonsoft.Json;
 using PeakPresence;
 using WebSocketSharp;

@@ -17,5 +17,8 @@
   "ingame.mesa": "Naviguer sur le plateau rocailleux de la Mesa",
   "ingame.caldera": "Jouer au sol est en lave dans la Caldeira",
   "ingame.kiln": "Résister à la chaleur de la Fournaise",
-  "ingame.peak": "Atteindre le Pic"
+  "ingame.peak": "Atteindre le Pic",
+  "ingame.gloom": "Explorer les profondeurs des Ténèbres",
+  "ingame.citadel": "Atteindre les hauteurs de la Citadelle",
+  "ingame.nadir": "?????"
 }

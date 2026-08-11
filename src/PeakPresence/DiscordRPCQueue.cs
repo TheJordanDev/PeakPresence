@@ -161,6 +161,16 @@ public class DiscordRPCQueue : MonoBehaviour
 			if (a.Party.Max != b.Party.Max) return false;
 		}
 
+		if (a.Assets == null && b.Assets != null) return false;
+		if (a.Assets != null && b.Assets == null) return false;
+		if (a.Assets != null && b.Assets != null)
+		{
+			if (!string.Equals(a.Assets.LargeImageKey, b.Assets.LargeImageKey)) return false;
+			if (!string.Equals(a.Assets.LargeImageText, b.Assets.LargeImageText)) return false;
+			if (!string.Equals(a.Assets.SmallImageKey, b.Assets.SmallImageKey)) return false;
+			if (!string.Equals(a.Assets.SmallImageText, b.Assets.SmallImageText)) return false;
+		}
+
 		return true;
 	}
 

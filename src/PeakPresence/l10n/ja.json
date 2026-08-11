@@ -17,5 +17,8 @@
   "ingame.mesa": "メサの岩だらけの地形を進む",
   "ingame.caldera": "カルデラで『床はマグマ』をプレイ中",
   "ingame.kiln": "火口の熱さに耐える",
-  "ingame.peak": "山頂を目指す"
+  "ingame.peak": "山頂を目指す",
+  "ingame.gloom": "仄暗き地の奥深くを探索中",
+  "ingame.citadel": "要塞の頂を登る",
+  "ingame.nadir": "?????"
 }

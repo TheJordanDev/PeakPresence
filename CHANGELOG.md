@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.7] - 11/08/2026
+
+- Added support for the new biomes : The GLOOM, The CITADEL, and The ????
+- Optimized the Discord RPC patch with an update queue
+
 ## [0.6] - 19/03/2026
 
 - Fixed the patch thats listened to the state update ( I don't know when it was changed but now its fixed )

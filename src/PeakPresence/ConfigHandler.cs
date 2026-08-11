@@ -1,6 +1,6 @@
 using BepInEx.Configuration;
 
-namespace AncestralMod;
+namespace PeakPresence;
 
 public static class ConfigHandler
 {
@@ -12,10 +12,6 @@ public static class ConfigHandler
 
     public static ConfigEntry<bool> UseDetailedDetails { get; private set; } = null!;
 
-    // public static ConfigEntry<bool> ShowAliveStatus { get; private set; } = null!;
-    // public static ConfigEntry<bool> ShowHeight { get; private set; } = null!;
-    // public static ConfigEntry<bool> AbbreviateHeight { get; private set; } = null!;
-
     public static ConfigEntry<string> LogoImageKey { get; private set; } = null!;
     public static ConfigEntry<string> ShoreImageKey { get; private set; } = null!;
     public static ConfigEntry<string> TropicsImageKey { get; private set; } = null!;
@@ -25,6 +21,9 @@ public static class ConfigHandler
     public static ConfigEntry<string> CalderaImageKey { get; private set; } = null!;
     public static ConfigEntry<string> KilnImageKey { get; private set; } = null!;
     public static ConfigEntry<string> PeakImageKey { get; private set; } = null!;
+    public static ConfigEntry<string> GloomImageKey { get; private set; } = null!;
+    public static ConfigEntry<string> CitadelImageKey { get; private set; } = null!;
+    public static ConfigEntry<string> NadirImageKey { get; private set; } = null!;
 
     public static void Initialize(ConfigFile configFile)
     {
@@ -40,10 +39,6 @@ public static class ConfigHandler
 
         UseDetailedDetails = config.Bind("General", "UseDetailedDetails", false, "Whether to use detailed presence information instead of \"In Game: {location}\"");
 
-        // ShowAliveStatus = config.Bind("General", "ShowAliveStatus", true, "Whether to show if the player is alive or dead in the presence.");
-        // ShowHeight = config.Bind("General", "ShowHeight", true, "Whether to show the player's height in the presence.");
-        // AbbreviateHeight = config.Bind("General", "AbbreviateHeight", true, "Whether to abbreviate the height measurement (e.g. 1500 m -> 1.5 km).");
-
         LogoImageKey = config.Bind("Images", "LogoImageKey", "logo", "The key for the logo image.");
         ShoreImageKey = config.Bind("Images", "ShoreImageKey", "shore", "The key for the shore image.");
         TropicsImageKey = config.Bind("Images", "TropicsImageKey", "tropics", "The key for the tropics image.");
@@ -53,5 +48,8 @@ public static class ConfigHandler
         CalderaImageKey = config.Bind("Images", "CalderaImageKey", "caldera", "The key for the caldera image.");
         KilnImageKey = config.Bind("Images", "KilnImageKey", "kiln", "The key for the kiln image.");
         PeakImageKey = config.Bind("Images", "PeakImageKey", "peak", "The key for the peak image.");
+        GloomImageKey = config.Bind("Images", "GloomImageKey", "gloom", "The key for the gloom image.");
+        CitadelImageKey = config.Bind("Images", "CitadelImageKey", "citadel", "The key for the citadel image.");
+        NadirImageKey = config.Bind("Images", "NadirImageKey", "nadir", "The key for the nadir image.");
     }
 }

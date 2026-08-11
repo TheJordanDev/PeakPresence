@@ -1,4 +1,3 @@
-using AncestralMod;
 using UnityEngine.SceneManagement;
 
 namespace PeakPresence;
@@ -29,6 +28,9 @@ public static class Helper
 			RichPresenceState.Status_Caldera => ConfigHandler.CalderaImageKey.Value,
 			RichPresenceState.Status_Kiln => ConfigHandler.KilnImageKey.Value,
 			RichPresenceState.Status_Peak => ConfigHandler.PeakImageKey.Value,
+			RichPresenceState.Status_Gloom => ConfigHandler.GloomImageKey.Value,
+			RichPresenceState.Status_Citadel => ConfigHandler.CitadelImageKey.Value,
+			RichPresenceState.Status_Nadir => ConfigHandler.NadirImageKey.Value,
 			_ => ""
 		};
 	}
@@ -47,6 +49,9 @@ public static class Helper
 			RichPresenceState.Status_Caldera => LocalizationManager.GetVanilla("CALDERA"),
 			RichPresenceState.Status_Kiln => LocalizationManager.GetVanilla("THE KILN"),
 			RichPresenceState.Status_Peak => LocalizationManager.GetVanilla("PEAK"),
+			RichPresenceState.Status_Gloom => LocalizationManager.GetVanilla("GLOOM"),
+			RichPresenceState.Status_Citadel => LocalizationManager.GetVanilla("THE CITADEL"),
+			RichPresenceState.Status_Nadir => LocalizationManager.GetVanilla("AREA_VOID"),
 			_ => "unknown"
 		};
 	}
@@ -65,6 +70,9 @@ public static class Helper
 			RichPresenceState.Status_Caldera => "caldera",
 			RichPresenceState.Status_Kiln => "kiln",
 			RichPresenceState.Status_Peak => "peak",
+			RichPresenceState.Status_Gloom => "gloom",
+			RichPresenceState.Status_Citadel => "citadel",
+			RichPresenceState.Status_Nadir => "nadir",
 			_ => "unknown"
 		};
 	}
